@@ -1,7 +1,7 @@
 # ParcialProgramacion
 # Se ingresaron estas tablas en este orden, para despues poder hacer las relaciones sin tener problemas con las claves foraneas.
-| sequelize model:generate --name Brand --attributes name:string
-| sequelize model:generate --name Category --attributes name:string
+* sequelize model:generate --name Brand --attributes name:string
+* sequelize model:generate --name Category --attributes name:string
 | sequelize model:generate --name Size --attributes tamaño:string
 | sequelize model:generate --name Gender --attributes type:string
 | sequelize model:generate --name Payment --attributes type:string
