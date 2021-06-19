@@ -13,3 +13,5 @@
 * sequelize model:generate --name Order --attributes number:integer,date:date,total:decimal,payments_id:integer,users_id:integer,users_addresses_id:integer,states_id:integer
 * sequelize model:generate --name Shipping --attributes street:string,number:integer,orders_id:integer
 * sequelize model:generate --name OrderDetail --attributes quantity:decimal,subtotal:decimal,products_id:integer,orders_id:integer
+
+ParcialProgramacion/DiagramaParcialProgramacion2.jpg
