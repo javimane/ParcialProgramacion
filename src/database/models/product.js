@@ -11,6 +11,21 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Product.belongsTo(models.Brand);
+       Product.belongsTo(models.Category);
+       Product.belongsTo(models.Size);
+       Product.belongsTo(models.Gender);
+       Product.hasOne(models.OrderDetail,{
+          foreignKey: 'product_id',
+          as: 'orderdetails'
+          
+       
+       });
+       //hasMany
+      Product.hasMany(models.Image, {
+        foreignKey: 'products_id',
+        as: "images"
+      })
     }
   };
   Product.init({
@@ -19,7 +34,10 @@ module.exports = (sequelize, DataTypes) => {
     stock: DataTypes.INTEGER,
     stock_min: DataTypes.INTEGER,
     stock_max: DataTypes.INTEGER,
-    brands_id: DataTypes.INTEGER
+    brands_id: DataTypes.INTEGER,
+    categories_id: DataTypes.INTEGER,
+    sizes_id: DataTypes.INTEGER,
+    genders_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Product',

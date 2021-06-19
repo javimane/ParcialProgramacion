@@ -11,11 +11,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      OrderDetail.belongsTo(models.Product);
+        
+      OrderDetail.belongsTo(models.Order);
     }
   };
   OrderDetail.init({
     quantity: DataTypes.DECIMAL,
-    subtotal: DataTypes.DECIMAL
+    subtotal: DataTypes.DECIMAL,
+    products_id: DataTypes.INTEGER,
+    orders_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'OrderDetail',

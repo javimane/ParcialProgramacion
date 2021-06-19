@@ -24,7 +24,32 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       brands_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:'brands',
+          key:'id'
+        }
+      },
+      categories_id: {
+        type: Sequelize.INTEGER,
+        references:{
+          model:'categories',
+          key:'id'
+        }
+      },
+      sizes_id: {
+        type: Sequelize.INTEGER,
+        references:{
+          model:'sizes',
+          key:'id'
+        }
+      },
+      genders_id: {
+        type: Sequelize.INTEGER,
+        references:{
+          model:'genders',
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,

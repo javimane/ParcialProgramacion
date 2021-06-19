@@ -1,3 +1,4 @@
+// Para tomar lo parametros del env
 require('dotenv').config()
 
 module.exports =
@@ -18,3 +19,4 @@ module.exports =
     migrationStorageTableName: "migrations"
 
 }
+
